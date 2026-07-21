@@ -38,7 +38,7 @@ int countTasks(const TaskNode* head) {
     // TODO: Traverse the list and count nodes.
     int count = 0;
     const TaskNode* curr = head;
-    while (curr != NULL) {
+    while (curr != nullptr { // I reccommend being consistent throughout all your code with using either NULL or nullptr
         count++; 
         curr = curr->next;}
     return count;
@@ -49,7 +49,7 @@ TaskNode* findTask(TaskNode* head, string description) {
     // Traverse the list.
     // Return the first node whose task description matches.
     // Return nullptr if not found.
-    while (head != NULL){
+    while (head != nullptr){ // I reccommend being consistent throughout all your code with using either NULL or nullptr
         if (head->data.description == description) return head;
         else head = head->next;}
     return nullptr;
@@ -73,7 +73,7 @@ int removeCompletedTasks(TaskNode*& head) {
     // Return the number of removed nodes.
     // Be sure to handle completed tasks at the head of the list.
     int count = 0;
-    while (head != NULL && head->data.completed){
+    while (head != nullptr && head->data.completed){ // I reccommend being consistent throughout all your code with using either NULL or nullptr
         count++;
         TaskNode* temp = head;
         head = head->next;
@@ -101,7 +101,7 @@ void clearTasks(TaskNode*& head) {
     // TODO:
     // Delete every node in the list.
     // Set head to nullptr.
-    while (head != NULL){
+    while (head != nullptr){ // I reccommend being consistent throughout all your code with using either NULL or nullptr
         TaskNode* temp = head;
         head = head->next;
         delete temp;
