@@ -27,6 +27,7 @@ Task createTask(string description, int priority) {
     return task;
 }
 
+// Creates a new node, points it to the old head, then makes it the new head
 void insertFront(TaskNode*& head, Task task) {
     TaskNode* newNode = new TaskNode;
 
@@ -73,6 +74,8 @@ bool markTaskComplete(TaskNode* head, string description) {
     return false;
 }
 
+// First removes completed tasks at the front, then walks the rest of the list
+// connecting neighboring nodes before deleting each completed one
 int removeCompletedTasks(TaskNode*& head) {
     int removed = 0;
 
